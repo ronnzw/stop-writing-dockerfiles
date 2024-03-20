@@ -112,3 +112,32 @@ files that `docker init` has created for you. But for now let's move on to the n
 
 ## Cookiecutter Django
 Cookiecutter Django is a framework for jumpstarting production-ready Django projects quickly. It supports Docker using docker-compose for development and production (using Traefik with LetsEncrypt support).
+
+
+### Installation
+1. First install cookiecutter `pip install cookiecutter`
+
+
+### How to use it?
+Get cookiecutter django with this command `cookiecutter https://github.com/cookiecutter/cookiecutter-django`
+
+This command will start asking use a number of questions. Since this guide is not about cookiecutter l will skip those questions.
+
+**NB:**  **Make sure the on docker question you select *y*, because by default it's set to no**
+
+With cookicutter it's a bit different because this is going to create more other files for django and deployment. The `.dockerignore` is in the main directory while the other a hidden. To find them follow this path:
+
+```md
+yourcookiecutterdirectory
+├── .dockerignore
+├── compose/local/django/Dockerfile
+└── myvenv/
+```
+
+You will see that you only have a Dockerfile and not `docker-compose.yml` because the other settings will be in `start`, `entrypoint` and some under `nginx/` directory.
+
+
+## Conclusion
+So you see now you don't need to stress yourself thinking about docker files. I think the cookiecutter method will require more deep knowledge of both django, docker and nginx. While the docker root is more straight forward and easy to manipulate. 
+
+Generally it's important to know the technology that you are using because in tech you are guaranteed that things go wrong and if you have little knowledge about it might be difficult for you to contemplate. 
