@@ -6,8 +6,8 @@ out there experiencing this pain. Fortunately we have two of our friends that ha
 In this article l will be mainly focusing on Django, showcasing two ways to avoid creating docker files. The first and the most recommended way is using a CLI command `docker init`. The second option is to use [Django cookiecutter]("https://cookiecutter-django.readthedocs.io/").
 
 ## Prerequisites
-- Django
-- Django cookiecutter
+- Django basic knowledge
+- Cookiecutter Django basic knowledge
 - Git
 - Virtual environment
 - bash
@@ -110,4 +110,5 @@ CMD python manage.py runserver
 Look at that everything is in there and it also includes helpful comments. I really like it. You can also take a look at the other
 files that `docker init` has created for you. But for now let's move on to the next way.
 
-## Django cookiecutter
+## Cookiecutter Django
+Cookiecutter Django is a framework for jumpstarting production-ready Django projects quickly. It supports Docker using docker-compose for development and production (using Traefik with LetsEncrypt support).
