@@ -7,6 +7,7 @@ In this article l will be mainly focusing on Django, showcasing two ways to avoi
 
 ## Prerequisites
 - Django
+- Django cookiecutter
 - Git
 - Virtual environment
 - bash
